@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>page title goes here</title>
+	
+
+</head>
+
+<body>
+
+
+
+  
+
+
+<form>
+
+Full name: <input type="text" id="fullname" name="fullname">
+Date of birth: <input type="text" id="birthday" name="birthday"><br>
+Gender: <input type="text" id="gender" name="gender"><br>
+
+
+<textarea id="fullist" name="fullist" rows="10" cols="100">
+</textarea>
+</form> 
+
+<button type="button id="button1" name="button1" onclick="savemember(fullname, birthday, gender)"> Next </button> 
+<button type="button id="button2" name="button2" onclick="displaymember()"> Display </button> 
+<button type="button id="button3" name="button3" onclick="resetinput()"> Reset </button> 
+
+
+<SCRIPT LANGUAGE = "JavaScript1.2">
+var members = [];  
+
+function savemember(fullname, birthday, gender){
+var memberstring = fullname + " " + birthday + " " + gender;
+members.push(memberstring);
+memberstring = 0;
+}
+
+function displaymember(){
+
+for (i = 0; i < members.length; i++) {
+fullist.value += members[i];
+}
+}
+
+function resetinput(){
+members = []
+}
+
+
+
+</SCRIPT>
+
+  
+</body>
+</html>
